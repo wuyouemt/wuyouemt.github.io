@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="./css/view.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./img/card.png"> 
+    <script src="./sakura.js"></script>
     <script type="text/javascript">
         window.onload=function()
         {
@@ -64,11 +65,11 @@
             <div class="headPhoto"></div>
             <!-- 介绍 -->
             <div class="meBox-title">
-                <p>I'm View.<img src="./img/04.gif" alt="你好" style="width: 20px; vertical-align: middle;"></p>
+                <p>I'm View.<img src="./img/04.gif" alt="你好" style="width: 35px; vertical-align: middle;"></p>
                 <div class="fg"></div>
             </div>
             <div class="meBox-text">
-                <p>一只菜狗<img src="./img/dog.gif" alt="菜狗" style="width: 20px; vertical-align: middle;"></p>
+                <p>一只菜狗<img src="./img/dog.gif" alt="菜狗" style="width: 35px; vertical-align: middle;"></p>
                 <p>又菜又爱玩</p>
                 <p>瞎折腾浪费时间最在行</p>
                 <p>无聊时看看动漫</p>
@@ -114,14 +115,14 @@
                     <br/>
                     <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
                     <span style="color: rgb(39, 39, 39);">mkdir -p </span>
-                    <span style="color: rgb(39, 39, 39);" id="filePath"></span>
+                    <span style="color: rgb(39, 39, 39);" id="filePath"><i class="fa fa-spinner"></i></span>
                     <br/>
                     <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
                     <span style="color: rgb(39, 39, 39);">cd </span>
-                    <span style="color: rgb(39, 39, 39);" id="filePath1"></span>
+                    <span style="color: rgb(39, 39, 39);" id="filePath1"><i class="fa fa-spinner"></i></span>
                     <br/>
                     <span style="color: rgb(0, 190, 0);">[root@view </span>
-                    <span style="color: rgb(0, 190, 0);" id="filePath2"></span>
+                    <span style="color: rgb(0, 190, 0);" id="filePath2"><i class="fa fa-spinner"></i></span>
                     <span style="color: rgb(0, 190, 0);"> ]# </span>
                     <span style="color: rgb(39, 39, 39);">vi life.txt</span>
                     <p>未完待续······</p>
@@ -160,12 +161,14 @@
             </div>
         </div>
     </div>
+    
 
     <!-- 页脚 -->
     <div id="footer">
-        <p>© 2021 View | </span>当前时间：<span id="nowtime"></span></p>
+        <p>© 2021 View | </span>当前时间：<span id="nowtime"><i class="fa fa-clock-o" aria-hidden="true"></i></span></p>
         <p>View's Zone</p>
     </div> 
+    
 </body>
 
 </html>

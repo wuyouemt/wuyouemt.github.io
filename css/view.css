@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(../img/bg1.png);
+    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -45,7 +45,7 @@ body {
 .headPhoto {
     width: 8rem;
     height: 8rem;
-    background: url(https://static01.imgkr.com/temp/dc5fb8679c45404baed1360524fbab2d.jpg) no-repeat;
+    background: url(../img/head.jpg) no-repeat;
     background-size: cover;
     border-radius: 50%;
     position: relative;
@@ -110,7 +110,7 @@ body {
     height: 45%;
     overflow: hidden;
     text-align: center;
-    color: rgb(70, 70, 70);
+    color: rgb(10, 0, 0);
     animation-name: meBox-text;
     animation-duration: 2s;
     animation-fill-mode: forwards;
