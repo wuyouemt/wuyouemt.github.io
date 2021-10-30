@@ -1,43 +1,171 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--网页头部-->
-<title>我的主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Welcome to my website</title>
+    <meta name="description"
+        content="这里是网站介绍">
+    <meta name="keywords" content="这里是网站关键词">
+    <link rel="stylesheet" type="text/css" href="./css/FiraCode.css">
+    <link rel="stylesheet" type="text/css" href="./css/view.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./img/card.png"> 
+    <script type="text/javascript">
+        window.onload=function()
+        {
+            window.requestAnimationFrame(getDate)
+        }
+        
+        function getDate()
+        {
+            window.setTimeout(function(){
+                window.requestAnimationFrame(getDate)
+            },1000/2)
+            var d=new Date();   
+            var year=d.getFullYear()  //获取年
+            var month=d.getMonth()+1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+            var day=d.getDay()    //获取日
+            var days=d.getDate() //获取日期
+            var hour=d.getHours()   //获取小时
+            var minute=d.getMinutes()  //获取分钟
+            var second=d.getSeconds()   //获取秒
+            
+            if(month<10) month="0"+month
+            if(days<10) days="0"+days
+            if(hour<10) hour="0"+hour
+            if(minute<10) minute="0"+minute
+            if(second<10) second="0"+second
+            
+            var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
+            var Tools=document.getElementById("nowtime")
+            var da=year+" 年 "+month+" 月 "+days+" 日 "+week[day]+" "+hour+" : "+minute+" :"+second
+            Tools.innerHTML=da
+            var file = document.getElementById("filePath")
+            var f2 = document.getElementById("filePath1")
+            var f3 = document.getElementById("filePath2")
+            var ymd = year+"/"+month+"/"+days
+            var dd = days
+            file.innerHTML=ymd
+            f2.innerHTML=ymd
+            f3.innerHTML=dd
+        }
+        
+    </script>
 </head>
 
-<!--body部分为网页显示内容-->
-<body background="image/2.jpg" bgproperties="fixed">
-<!--标题-->
-<h1><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 个人主页</strong></h1>
-<table width="89%" border="0" align="center" cellpadding="0" cellspacing="0">
-<tr><th width="243" height="50" align="center" valign="middle" bgcolor="#66FF00"><h3>我的主页</h3></th>
-<td width="277" height="50" align="center" valign="middle" bgcolor="#66FF33"><h3>个人简介</h3></td>
-<td width="268" height="50" align="center" bgcolor="#66FF66"><h3>个人爱好</h3></td>
-    <td width="204" height="18" align="center" bgcolor="#66FF99"><h3>未来展望</h3></td>
-</tr>
-</table>
-<table width="89%" height="418" border="0" align="center">
-  <tr>
-    <td colspan="2" align="center"><font color="#FF9933" size="+2"><b>个人简介</b></font></td>
-    <td width="163">&nbsp;</td>
-    <td width="205" rowspan="3"><a href="school.html"  target="_blank"><img src="image/1.jpg" /></a></td>
-  </tr>
-  <tr>
-    <td height="282" colspan="3"><p class="style3">姓名：***</p>
-        <p class="style3">学校： ****</p>
-    <p class="style3">生平：。</p></td>
-   
-  </tr>
-  <tr>
-    <td width="121" height="50">友情链接</td>
-    <td width="477"><a href=""  target="_blank">QQ空间</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cn/"  target="_blank">大学</a></td>
-    <td>&nbsp;</td>
-   
-  </tr>
-  <tr>
-    <td height="44" colspan="4" align="center">&copy;CopyRight 2005-2011 www.itzcn.com AllRights Reserved</td>
-  </tr>
-</table>
+<body>
+    <div id="box">
+        <!-- 个人资料卡片 -->
+        <div class="meBox">
+            <!-- 头像 -->
+            <div class="headPhoto"></div>
+            <!-- 介绍 -->
+            <div class="meBox-title">
+                <p>I'm View.<img src="./img/04.gif" alt="你好" style="width: 20px; vertical-align: middle;"></p>
+                <div class="fg"></div>
+            </div>
+            <div class="meBox-text">
+                <p>一只菜狗<img src="./img/dog.gif" alt="菜狗" style="width: 20px; vertical-align: middle;"></p>
+                <p>又菜又爱玩</p>
+                <p>瞎折腾浪费时间最在行</p>
+                <p>无聊时看看动漫</p>
+                <p>最爱<img src="./img/07.jpg" alt="emt" style="width: 35px; vertical-align: middle;"><img src="./img/love.png" alt="爱心" style="width: 20px; vertical-align: middle;"></p>
+            </div>
+            <!-- 两个按钮 -->
+            <div class="meBox-Button">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=1971358856&site=qq&menu=yes" target="_blank"><i class="social fa fa-qq"></i></a>
+                <a href="mailto:airyemt@163.com" target="_blank"><i class="social fa fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- 伪终端介绍 -->
+        <div id="cmdBox">
+            <!-- 第一个终端 -->
+            <div class="cmd">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>emt - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">./tianqi.sh</span>
+                    <br />
+                    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tb&skin=pitaya" frameborder="0"
+                        width="350" height="24" allowtransparency="true"></iframe>
+                    <br />
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">cat /me.txt</span>
+                    <p>爱好计算机，擅长Java/C++<img src="./img/computer.png" alt="计算机" style="width: 20px; vertical-align: middle;"></p>
+                    <p>大学在校生，本科软件工程，硕士计算机科学与技术<img src="./img/student.png" alt="学生" style="width: 20px; vertical-align: middle;"></p>
+                    <p>同时我也很喜欢刷Leetcode，会坚持写博客<img src="./img/write.png" alt="写" style="width: 20px; vertical-align: middle;"></p>
+                    <p>先定个小目标，进大厂拧螺丝<img src="./img/wh.png" alt="努力" style="width: 20px; vertical-align: middle;"></p>
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">sudo rm -rf /过去的遗憾/*</span>
+                    <br/>
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">mkdir -p </span>
+                    <span style="color: rgb(39, 39, 39);" id="filePath"></span>
+                    <br/>
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">cd </span>
+                    <span style="color: rgb(39, 39, 39);" id="filePath1"></span>
+                    <br/>
+                    <span style="color: rgb(0, 190, 0);">[root@view </span>
+                    <span style="color: rgb(0, 190, 0);" id="filePath2"></span>
+                    <span style="color: rgb(0, 190, 0);"> ]# </span>
+                    <span style="color: rgb(39, 39, 39);">vi life.txt</span>
+                    <p>未完待续······</p>
+                </div>
+            </div>
+            <!-- 第二个终端 -->
+            <div class="cmd cmd2">
+                <!-- 三个按钮 -->
+                <div class="click">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <!-- 顶部标题 -->
+                <div class="title">
+                    <span>emt - bash</span>
+                </div>
+                <!-- 终端内文字 -->
+                <div class="cmdText">
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">./links.sh</span>
+                    <p>我的其他社区平台：</p>
+                    <ul class="ul">
+                        <li><a href="https://blog.csdn.net/emttxdy" target="_blank" style="color: rgb(0, 153, 255);">Blog</a></li>
+                        <li><a href="https://leetcode-cn.com/u/airyview/" target="_blank" style="color: rgb(0, 153, 255);">Leetcode</a></li>
+                    </ul>
+                    <span style="color: rgb(0, 190, 0);">[root@view ~ ]# </span>
+                    <span style="color: rgb(39, 39, 39);">./contact.sh</span>
+                    <p>可直接点击左边名片QQ/Email快捷联系我</p>
+                    <p>也可通过如下联系方式：</p>
+                    <ul class="ul">
+                        <li><a>QQ:1971358856</a></li>
+                        <li><a>邮箱:airyemt@163.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer">
+        <p>© 2021 View | </span>当前时间：<span id="nowtime"></span></p>
+        <p>View's Zone</p>
+    </div> 
 </body>
+
 </html>
