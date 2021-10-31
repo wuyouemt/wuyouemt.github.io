@@ -152,11 +152,12 @@ body {
     text-decoration: none;
     color: gray;
     transition: all 0.3s;
+    font-size: 25px;
 }
 
 .meBox-Button a:hover {
     color: rgb(0, 132, 255);
-    font-size: 1.2rem;
+    font-size: 30px;
 }
 
 .meBox:hover .meBox-Button a {
