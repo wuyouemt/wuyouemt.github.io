@@ -9,7 +9,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(../img/bg.jpg);
+    background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(../img/emt.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -26,7 +26,7 @@ body {
 .meBox {
     float: left;
     width: 20rem;
-    height: 25rem;
+    height: 28rem;
     background-color: rgb(225, 156, 228);
     opacity:0.6;
     margin-top: 100px;
@@ -37,7 +37,7 @@ body {
 
 .meBox:hover {
     width: 21rem;
-    height: 26rem;
+    height: 29rem;
     margin: 95px 0 0 -5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
@@ -178,6 +178,7 @@ body {
     border-radius: 10px 10px 5px 5px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
+    opacity:0.1;
     transition: all 0.3s;
     font-size: 14px;
     color: rgb(88, 89, 92);
@@ -190,6 +191,7 @@ body {
     width: 610px;
     height: 410px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    opacity:1.0;
     margin: -5px 0 0 -5px;
     z-index: 1;
 }
